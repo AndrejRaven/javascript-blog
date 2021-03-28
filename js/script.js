@@ -69,7 +69,20 @@ function generateTitleLinks() {
     console.log(links);
     for (let link of links) {
         link.addEventListener('click', titleClickHandler);
-    }   
+    }
 }
 
 generateTitleLinks();
+
+let burgerMenu = document.querySelector('.burger'),
+    navLinks = document.querySelector('.titles');
+
+burgerMenu.addEventListener('click', () => {
+    if(navLinks.style.display == "none") {
+        navLinks.style.display = "block";
+    } else {
+        navLinks.style.display = "none";
+    }
+
+    
+});
