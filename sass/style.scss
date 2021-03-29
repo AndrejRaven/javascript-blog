@@ -24,8 +24,7 @@ $transition: all 0.5s linear;
 }
 
 body {
-    // background: $color-light;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background:  #c3cfe2;
     font-family: $font-text;
     color: $color-dark;
     font-weight: 300;
@@ -177,9 +176,7 @@ a:hover {
         flex-wrap: wrap;
     }
 
-    .nav {
-        position: static;
-    }
+    
 
     .sidebar .titles {
         display: none;
@@ -208,6 +205,16 @@ a:hover {
     .burger i{
         font-size: 36px;
         color: $color-dark;
+    }
+
+    .posts {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        flex-direction: column;
+        
     }
 
 }
