@@ -28,13 +28,9 @@ function titleClickHandler(event) {
     console.log(neededArticle);
     /*[DONE] add class 'active' to the correct article */
     neededArticle.classList.add("active");
+    
 }
 
-// const links = document.querySelectorAll('.titles a');
-//       console.log(links);  
-// for (let link of links) {
-//     link.addEventListener('click', titleClickHandler);
-// }
 
 const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
@@ -80,8 +76,14 @@ let burgerMenu = document.querySelector('.burger'),
 burgerMenu.addEventListener('click', () => {
     if(navLinks.style.display === "none" || navLinks.style.display === '') {
         navLinks.style.display = "block";
+        const links = document.querySelectorAll('.titles a');
+        for (let link of links) {
+        link.addEventListener('click', () => {
+            navLinks.style.display = 'none';
+        });
+    }
     } else {
         navLinks.style.display = "none";
-    }
+    } 
 });
 
