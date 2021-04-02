@@ -24,8 +24,7 @@ $transition: all 0.5s linear;
 }
 
 body {
-    // background: $color-light;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background:  #c3cfe2;
     font-family: $font-text;
     color: $color-dark;
     font-weight: 300;
@@ -76,13 +75,13 @@ a:hover {
 
 .posts {
     flex: 2 0 0;
-    
+
 }
 
 .sidebar,
 .posts {
-    background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
-    background-blend-mode: normal,color-burn;
+    background-image: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0.02) 61%, rgba(0, 0, 0, 0.02) 73%), linear-gradient(33deg, rgba(255, 255, 255, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+    background-blend-mode: normal, color-burn;
     margin-right: 10px;
     padding: 40px;
     border: 1px solid $color-dark;
@@ -117,7 +116,7 @@ a:hover {
 .list-horizontal {
     li {
         display: inline-block;
-        
+
     }
 }
 
@@ -151,8 +150,81 @@ a:hover {
 
 .post-tags {
     display: flex;
-
+    align-items: center;
+    
     p {
         margin: 0 10px 0 0;
     }
+
+    a {
+        margin: 0 10px 0 0;  
+    }
+}
+
+.burger {
+    display: none;
+}
+
+
+
+@media(max-width: 768px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    
+
+    .sidebar .titles {
+        display: none;
+        flex: 100%;
+        text-align: center;
+        transition: $transition;
+
+    }
+
+    .sidebar .titles li {
+        padding: 10px; 
+        font-size: 24px;
+        border-top: 1px solid $color-dark;
+    }
+
+    .sidebar .titles li a {
+        width: 100%;
+    }
+
+
+    .burger {
+        color: $color-dark;
+        display: block;
+    }
+
+    .burger i{
+        font-size: 36px;
+        color: $color-dark;
+    }
+
+    .posts {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        flex-direction: column;
+        
+    }
+
+    .footer ul {
+        columns: 2;
+        width: 100%;
+    }
+
 }
