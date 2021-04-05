@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200, 300,400,500,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
 
 /* Variables */
 
@@ -163,6 +163,36 @@ a:hover {
 
 .burger {
     display: none;
+}
+
+.tag-size-1 {
+    font-size: 70%;
+    font-weight: 200;
+}
+
+.tag-size-2 {
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.tag-size-3 {
+    font-size: 110%;
+    font-weight: 400;
+}
+
+.tag-size-4 {
+    font-size: 130%;
+    font-size: 500;
+}
+
+.tag-size-5 {
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.tags li {
+    display: inline-block;
+    padding: 5px;
 }
 
 
